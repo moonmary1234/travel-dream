@@ -1,0 +1,307 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+    background: linear-gradient(145deg, #eef2f7 0%, #d9e2ec 100%);
+    color: #1e2a3e;
+    padding: 2rem 1.5rem;
+}
+
+.main-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(0px);
+    border-radius: 2.5rem;
+    box-shadow: 0 25px 45px -12px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+    padding: 2rem 2rem 2.5rem;
+    transition: all 0.2s;
+}
+
+.hero {
+    text-align: center;
+    margin-bottom: 2.2rem;
+}
+
+.typewriter-title {
+    font-size: clamp(1.8rem, 6vw, 3.4rem);
+    font-weight: 800;
+    color: #0b3b5f;
+    letter-spacing: -0.01em;
+    min-height: 5rem;
+    border-right: 3px solid #f4a261;
+    display: inline-block;
+    white-space: pre-wrap;
+    padding-right: 8px;
+    background: linear-gradient(135deg, #2c3e50, #1d4e6e);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    text-shadow: none;
+}
+
+.subhead {
+    color: #2c5a7a;
+    margin-top: 0.5rem;
+    font-weight: 500;
+}
+
+.tabs-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+    margin: 2rem 0 1.8rem;
+}
+
+.tab-btn {
+    background: #e9ecef;
+    border: none;
+    padding: 0.7rem 1.8rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 60px;
+    color: #2c3e50;
+    cursor: pointer;
+    transition: all 0.25s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.tab-btn.active {
+    background: #1f6392;
+    color: white;
+    box-shadow: 0 8px 18px rgba(31,99,146,0.3);
+    transform: scale(1.02);
+}
+
+.tab-btn:hover:not(.active) {
+    background: #cbd5e1;
+    transform: translateY(-2px);
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.8rem;
+    margin: 1.5rem 0 1rem;
+}
+
+.travel-card {
+    background: white;
+    border-radius: 1.8rem;
+    overflow: hidden;
+    box-shadow: 0 12px 22px -10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.travel-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 24px 30px -12px rgba(0, 0, 0, 0.2);
+}
+
+.card-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+    background: #cfdde6;
+}
+
+.card-content {
+    padding: 1.2rem 1.2rem 1.4rem;
+}
+
+.card-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.4rem;
+    color: #1f3e53;
+}
+
+.card-content p {
+    color: #4a627a;
+    line-height: 1.4;
+    font-size: 0.9rem;
+}
+
+.country-tag {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 0.75rem;
+    background: #eef2fa;
+    padding: 4px 12px;
+    border-radius: 30px;
+    color: #2c6b2f;
+}
+
+.prep-section {
+    background: #f0f4f9;
+    border-radius: 2rem;
+    padding: 1.3rem 1.8rem;
+    margin: 2rem 0 1.5rem;
+}
+
+.prep-title {
+    font-weight: 700;
+    font-size: 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 1rem;
+}
+
+.progress-container {
+    background: #cbdbe0;
+    border-radius: 40px;
+    height: 24px;
+    width: 100%;
+    overflow: hidden;
+    margin: 0.5rem 0 1rem;
+}
+
+.progress-fill {
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(90deg, #3b8fc2, #2a7f62);
+    border-radius: 40px;
+    transition: width 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 10px;
+    color: white;
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+
+.slider-row {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 0.5rem;
+}
+
+input[type="range"] {
+    flex: 1;
+    min-width: 180px;
+    height: 5px;
+    -webkit-appearance: none;
+    background: #cbdbe0;
+    border-radius: 10px;
+}
+
+input[type="range"]:focus {
+    outline: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 18px;
+    height: 18px;
+    background: #1f6392;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.2);
+}
+
+.percent-value {
+    font-weight: 800;
+    background: #2c3e50;
+    color: white;
+    padding: 4px 12px;
+    border-radius: 40px;
+    font-size: 0.9rem;
+}
+
+.checkbox-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    background: #e6edf4;
+    padding: 10px 18px;
+    border-radius: 60px;
+    width: fit-content;
+}
+
+.custom-check {
+    position: relative;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+}
+
+.custom-check input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    position: absolute;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 24px;
+    height: 24px;
+    background-color: #fff;
+    border: 2px solid #1f6392;
+    border-radius: 8px;
+    transition: 0.1s;
+    cursor: pointer;
+}
+
+.custom-check input:checked ~ .checkmark {
+    background-color: #1f6392;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+    left: 8px;
+    top: 3px;
+    width: 6px;
+    height: 12px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.custom-check input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.checkbox-label {
+    font-weight: 500;
+    cursor: pointer;
+    user-select: none;
+}
+
+footer {
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 0.75rem;
+    color: #5a6e7c;
+    border-top: 1px solid #cfdfed;
+    padding-top: 1.5rem;
+}
+
+@media (max-width: 640px) {
+    .main-container {
+        padding: 1.2rem;
+    }
+    .tab-btn {
+        padding: 0.5rem 1.2rem;
+        font-size: 0.9rem;
+    }
+    .cards-grid {
+        gap: 1.2rem;
+    }
+}
