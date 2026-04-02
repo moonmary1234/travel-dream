@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Путешествия мечты | Открой мир</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="main-container">
+    <div class="hero">
+        <div class="typewriter-title" id="typewriterTarget"></div>
+        <div class="subhead">Открой новые горизонты · Вдохновение для идеального отпуска</div>
+    </div>
+
+    <div class="tabs-wrapper">
+        <button class="tab-btn active" data-category="europe">Европа</button>
+        <button class="tab-btn" data-category="asia">Азия</button>
+        <button class="tab-btn" data-category="america">Америка</button>
+    </div>
+
+    <div id="cardsContainer" class="cards-grid"></div>
+
+    <div class="prep-section">
+        <div class="prep-title">Степень готовности к путешествию</div>
+        <div class="progress-container">
+            <div class="progress-fill" id="progressFill">0%</div>
+        </div>
+        <div class="slider-row">
+            <span>На сколько вы готовы?</span>
+            <input type="range" id="readinessSlider" min="0" max="100" value="35">
+            <span class="percent-value" id="percentDisplay">35%</span>
+        </div>
+    </div>
+
+    <div class="checkbox-wrapper" id="newsletterBox">
+        <label class="custom-check">
+            <input type="checkbox" id="newsletterCheck">
+            <span class="checkmark"></span>
+        </label>
+        <label for="newsletterCheck" class="checkbox-label">Подписаться на рассылку лучших предложений</label>
+    </div>
+    <footer>
+        Путешествие мечты начинается с одного билета | Ваш гид по лучшим направлениям
+    </footer>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
